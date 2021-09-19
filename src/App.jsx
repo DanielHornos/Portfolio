@@ -4,6 +4,8 @@ import Topbar from "./components/topbar/topbar";
 import Intro from "./components/intro/intro";
 import Works from "./components/works/works";
 
+import './app.scss'
+
 function App() {
   return (
     <div className="app">
