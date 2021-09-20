@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { init } from "ityped";
+import { useTranslation } from 'react-i18next';
 
 import introImage from '../../assets/daniel portfolio.png';
 
@@ -7,6 +8,7 @@ import "./intro.scss";
 
 export default function Intro() {
     const textRef = useRef();
+    const { t } = useTranslation();
 
     useEffect(() => {
         init(textRef.current, {
@@ -26,10 +28,10 @@ export default function Intro() {
             </div>
             <div className="right">
                 <div className="wrapper">
-                    <h2>Hi there, I'm</h2>
+                    <h2>{t("intro.welcome")}</h2>
                     <h1>Daniel Hornos Valiente</h1>
                     <h3>
-                        Web Developer <span ref={textRef}></span>
+                        {t("intro.webDeveloper")} <span ref={textRef}></span>
                     </h3>
                 </div>
                 <a href="#portfolio">

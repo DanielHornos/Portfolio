@@ -24,7 +24,11 @@ i18n
                         portfolio: 'Portfolio',
                         works: 'Works',
                         contact: 'Contact'
-                    }
+                    },
+                    intro: {
+                        welcome: "Hi there, I'm",
+                        webDeveloper: 'Web Developer: ',
+                    },
                 }
             },
             es: {
@@ -34,7 +38,11 @@ i18n
                         portfolio: 'Catalogo',
                         works: 'Trabajos',
                         contact: 'Contacto'
-                    }
+                    },
+                    intro: {
+                        welcome: "Hola ¿Qué tal?, soy",
+                        webDeveloper: 'Desarrollador Web: ',
+                    },
                 }
             }
         }
