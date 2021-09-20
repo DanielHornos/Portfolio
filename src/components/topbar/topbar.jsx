@@ -1,13 +1,19 @@
-import "./topbar.scss"
 import { useTranslation } from 'react-i18next';
+
+import enFlag from "../../assets/en-flag.png"
+import esFlag from "../../assets/es-flag.png"
+import plFlag from "../../assets/pl-flag.png"
+
+import "./topbar.scss"
 
 
 export default function Topbar({ menuOpen, setMenuOpen }) {
     const { i18n } = useTranslation();
 
     const languages = {
-        en: { nativeName: 'English' },
-        es: { nativeName: 'Español' }
+        en: { flag: enFlag },
+        es: { flag: esFlag },
+        pl: { flag: plFlag }
     };
 
     return (
@@ -19,11 +25,12 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
                     </a>
                     <div>
                         {Object.keys(languages).map((language) => (
-                            <button key={language} style={{ fontWeight: i18n.language === language ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(language)}>
-                                {languages[language].nativeName}
-                            </button>
+                            <div className="flagItem" style={{ opacity: i18n.language === language ? '100%' : '50%' }}>
+                                <img src={languages[language].flag} alt="" onClick={() => i18n.changeLanguage(language)} />
+                            </div>
                         ))}
                     </div>
+
                 </div>
                 <div className="right">
                     <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
