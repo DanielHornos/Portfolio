@@ -31,7 +31,7 @@ export default function Intro() {
                     <h2>{t("intro.welcome")}</h2>
                     <h1>Daniel Hornos Valiente</h1>
                     <h3>
-                        {t("intro.webDeveloper")} <span ref={textRef}></span>
+                        {t("intro.webDeveloper")}: <span ref={textRef}></span>
                     </h3>
                 </div>
                 <a href="#portfolio">

@@ -27,7 +27,7 @@ i18n
                     },
                     intro: {
                         welcome: "Hi there, I'm",
-                        webDeveloper: 'Web Developer: ',
+                        webDeveloper: 'Web Developer',
                     },
                 }
             },
@@ -41,7 +41,7 @@ i18n
                     },
                     intro: {
                         welcome: "Hola ¿Qué tal?, soy",
-                        webDeveloper: 'Desarrollador Web: ',
+                        webDeveloper: 'Desarrollador Web',
                     },
                 }
             }
