@@ -29,6 +29,18 @@ i18n
                         welcome: "Hi there, I'm",
                         webDeveloper: 'Web Developer',
                     },
+                    contact: {
+                        contactMe: "Contact me",
+                        email: "Email",
+                        message: 'Message',
+                        send: 'Send',
+                        validInput: {
+                            thanks: 'Thanks, message was sent correctly',
+                            replyAsap: "I'll reply ASAP :)"
+                        },
+                        invalidEmail: 'Please introduce a valid email',
+                        invalidMessage: 'Please write some message',
+                    },
                 }
             },
             es: {
@@ -42,6 +54,18 @@ i18n
                     intro: {
                         welcome: "Hola ¿Qué tal?, soy",
                         webDeveloper: 'Desarrollador Web',
+                    },
+                    contact: {
+                        contactMe: "Contáctame",
+                        email: "Correo electrónico",
+                        message: 'Mensaje',
+                        send: 'Enviar',
+                        validInput: {
+                            thanks: 'Gracias, el mensaje se ha enviado correctamente',
+                            replyAsap: "Le contestaré lo antes posible :)"
+                        },
+                        invalidEmail: 'Introduzca un correo electrónico válido',
+                        invalidMessage: 'Por favor escribe algún mensaje',
                     },
                 }
             }
