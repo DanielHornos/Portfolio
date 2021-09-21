@@ -4,8 +4,9 @@ import Contact from "./components/contact/contact";
 import Portfolio from "./components/portfolio/portfolio";
 import Topbar from "./components/topbar/topbar";
 import Intro from "./components/intro/intro";
-import Works from "./components/works/works";
+import Skills from "./components/skills/skills";
 import Menu from "./components/menu/menu";
+import Experience from "./components/experience/experience";
 
 import './app.scss'
 
@@ -19,7 +20,8 @@ function App() {
       <div className="sections">
         <Intro />
         <Portfolio />
-        <Works />
+        <Skills />
+        <Experience />
         <Contact />
       </div>
     </div>
