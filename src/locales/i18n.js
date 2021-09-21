@@ -20,12 +20,8 @@ i18n
             escapeValue: false, // not needed for react as it escapes by default
         },
         resources: {
-            en: {
-                translation: enTranslations
-            },
-            es: {
-                translation: esTranslations
-            }
+            en: enTranslations,
+            es: esTranslations
         }
     });
 
