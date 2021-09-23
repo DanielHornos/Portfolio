@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 
 import enFlag from "../../assets/en-flag.png"
@@ -7,7 +8,8 @@ import plFlag from "../../assets/pl-flag.png"
 import "./topbar.scss"
 
 
-export default function Topbar({ menuOpen, setMenuOpen }) {
+export default function Topbar({ menuOpen, setMenuOpen, darkMode, setDarkMode }) {
+
     const { i18n } = useTranslation();
 
     const languages = {
@@ -15,6 +17,10 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
         es: { flag: esFlag },
         pl: { flag: plFlag }
     };
+
+    const handleOnChange = () => {
+        setDarkMode(!darkMode)
+    }
 
     return (
         <div className={"topbar " + (menuOpen && "active")}>
@@ -30,9 +36,16 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
                             </div>
                         ))}
                     </div>
-
                 </div>
                 <div className="right">
+                    <div className="dark-light-toggle">
+                        <input type="checkbox" class="checkbox" id="chk" checked={darkMode} onChange={handleOnChange} />
+                        <label class="label" for="chk">
+                            <span role="img" aria-label="light" className="light-emoji">🌞</span>
+                            <span role="img" aria-label="dark" className="dark-emoji">🌜</span>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
                     <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
                         <span className="line1"></span>
                         <span className="line2"></span>

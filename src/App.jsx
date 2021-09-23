@@ -12,10 +12,11 @@ import './app.scss'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [darkMode, setDarkMode] = useState(false)
 
   return (
-    <div className="app">
-      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+    <div className={"app " + (darkMode && 'dark-mode')}>
+      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} darkMode={darkMode} setDarkMode={setDarkMode} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
@@ -24,7 +25,7 @@ function App() {
         <Experience />
         <Contact />
       </div>
-    </div>
+    </ div>
   );
 }
 

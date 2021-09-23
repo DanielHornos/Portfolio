@@ -1,10 +1,10 @@
 .app{
     height: 100vh;
+    background-color: #e9d5a1;
 
     .sections{
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: lightsalmon;
         position: relative;
         top: 70px;
         scroll-behavior: smooth;
@@ -20,4 +20,8 @@
             scroll-snap-align: start;
         }
     }
+}
+
+.dark-mode{
+    background-color: #343a40;
 }
