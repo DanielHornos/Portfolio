@@ -4,7 +4,7 @@
   width: 100%;
   height: 70px;
   background-color: $lightBackgroundOddPages;
-  color: $mainColor;
+  color: $menuColor;
   position: fixed;
   top: 0;
   z-index: 3;
@@ -67,7 +67,7 @@
         span {
           width: 100%;
           height: 3px;
-          background-color: $mainColor;
+          background-color: $menuColor;
           transform-origin: left;
           transition: all 2s ease;
         }
@@ -76,7 +76,7 @@
   }
 
   &.active {
-    background-color: $mainColor;
+    background-color: $menuColor;
     color: white;
 
     .hamburger {
@@ -150,7 +150,7 @@
 
 .app.dark-mode{
   .topbar{
-    background-color: $mainColor;
+    background-color: $menuColor;
     color: white;
 
     .hamburger {
