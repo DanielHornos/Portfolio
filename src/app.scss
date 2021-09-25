@@ -1,6 +1,5 @@
 .app{
     height: 100vh;
-    background-color: #e9d5a1;
 
     .sections{
         width: 100%;
@@ -20,8 +19,4 @@
             scroll-snap-align: start;
         }
     }
-}
-
-.dark-mode{
-    background-color: #343a40;
 }

@@ -1,3 +1,13 @@
 .experience{
-    background-color: lightslategrey;
+    background-color: rgb(245, 248, 209);
 }
+
+.app.dark-mode{
+    .experience{
+      background-color: #6c757d;
+  
+      h1, h2, h3 {
+        color: white;
+      }
+    }
+  }

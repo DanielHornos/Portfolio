@@ -1,5 +1,7 @@
 .skills{
-    background-color: lightgreen;
+    background-color: #e9d5a1;
+    overflow: hidden;
+
 
     .skills-container {
         display: flex;
@@ -18,5 +20,15 @@
                 height: 50px;
             }
         }
+    }
+}
+
+.app.dark-mode{
+    .skills{
+      background-color: #343a40;
+  
+      h1, .skill-tile {
+        color: white;
+      }
     }
 }

@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .contact {
-  background-color: white;
+  background-color: #e9d5a1;
   display: flex;
 
   @include mobile {
@@ -75,6 +75,16 @@
       span {
         color: green;
       }
+    }
+  }
+}
+
+.app.dark-mode{
+  .contact{
+    background-color: #343a40;
+
+    h1, h2 {
+      color: white;
     }
   }
 }

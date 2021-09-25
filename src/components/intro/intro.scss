@@ -2,6 +2,7 @@
 
 .intro {
   display: flex;
+  background-color: #e9d5a1;
 
   @include mobile{
     flex-direction: column;
@@ -104,6 +105,16 @@
           opacity: 0;
         }
       }
+    }
+  }
+}
+
+.app.dark-mode{
+  .intro{
+    background-color: #343a40;
+
+    h1, h2, h3 {
+      color: white;
     }
   }
 }
