@@ -2,7 +2,7 @@
 
 .intro {
   display: flex;
-  background-color: #e9d5a1;
+  background-color: $lightBackgroundEvenPages;
 
   @include mobile{
     flex-direction: column;
@@ -111,7 +111,7 @@
 
 .app.dark-mode{
   .intro{
-    background-color: #343a40;
+    background-color: $darkBackgroundEvenPages;
 
     h1, h2, h3 {
       color: white;

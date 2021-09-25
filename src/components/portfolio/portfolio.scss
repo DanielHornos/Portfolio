@@ -1,10 +1,12 @@
+@import "../../global.scss";
+
 .portfolio{
-    background-color: rgb(245, 248, 209);
+    background-color: $lightBackgroundOddPages;
 }
 
 .app.dark-mode{
     .portfolio{
-      background-color: #6c757d;
+      background-color: $darkBackgroundOddPages;
   
       h1, h2, h3 {
         color: white;

@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .contact {
-  background-color: #e9d5a1;
+  background-color: $lightBackgroundEvenPages;
   display: flex;
 
   @include mobile {
@@ -81,7 +81,7 @@
 
 .app.dark-mode{
   .contact{
-    background-color: #343a40;
+    background-color: $darkBackgroundEvenPages;
 
     h1, h2 {
       color: white;

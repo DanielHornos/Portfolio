@@ -1,5 +1,7 @@
+@import "../../global.scss";
+
 .skills{
-    background-color: #e9d5a1;
+    background-color: $lightBackgroundEvenPages;
     overflow: hidden;
 
 
@@ -25,7 +27,7 @@
 
 .app.dark-mode{
     .skills{
-      background-color: #343a40;
+        background-color: $darkBackgroundEvenPages;
   
       h1, .skill-tile {
         color: white;
