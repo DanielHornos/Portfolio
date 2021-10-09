@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 
 import enFlag from "../../assets/en-flag.png"
@@ -30,8 +29,8 @@ export default function Topbar({ menuOpen, setMenuOpen, darkMode, setDarkMode })
                         Daniel Hornos
                     </a>
                     <div>
-                        {Object.keys(languages).map((language) => (
-                            <div className="flagItem" style={{ opacity: i18n.language === language ? '100%' : '50%' }}>
+                        {Object.keys(languages).map((language, index) => (
+                            <div key={index} className="flagItem" style={{ opacity: i18n.language === language ? '100%' : '50%' }}>
                                 <img src={languages[language].flag} alt="" onClick={() => i18n.changeLanguage(language)} />
                             </div>
                         ))}
@@ -39,11 +38,11 @@ export default function Topbar({ menuOpen, setMenuOpen, darkMode, setDarkMode })
                 </div>
                 <div className="right">
                     <div className="dark-light-toggle">
-                        <input type="checkbox" class="checkbox" id="chk" checked={darkMode} onChange={handleOnChange} />
-                        <label class="label" for="chk">
+                        <input type="checkbox" className="checkbox" id="chk" checked={darkMode} onChange={handleOnChange} />
+                        <label className="label" htmlFor="chk">
                             <span role="img" aria-label="light" className="light-emoji">🌞</span>
                             <span role="img" aria-label="dark" className="dark-emoji">🌜</span>
-                            <div class="ball"></div>
+                            <div className="ball"></div>
                         </label>
                     </div>
                     <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

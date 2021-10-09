@@ -45,9 +45,9 @@ export default function Skills() {
             },
         ]
     };
-    var skillsList = skills.icons.map(function (skills, i) {
+    var skillsList = skills.icons.map(function (skills, index) {
         return (
-            <div className="skill-tile">
+            <div key={index} className="skill-tile">
                 <img src={skills.icon} alt="" className="skill-logo" />
                 {skills.name}
             </div>
