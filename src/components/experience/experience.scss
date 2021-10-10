@@ -2,6 +2,26 @@
 
 .experience{
     background-color: $lightBackgroundOddPages;
+    .graduation-icon{
+      transform: scale(0.5);
+    }
+    .work-icon{
+      transform: scale(0.6);
+    }
+    
+    .vertical-timeline-element-icon{
+      margin-top: 40px;
+      overflow: hidden;
+    }
+    
+    .vertical-timeline-element-date{
+      position: unset !important;
+    }
+
+    .mstr-logo{
+      // transform: scale(0.5);
+      width: 150px;
+    }
 }
 
 .app.dark-mode{
@@ -11,5 +31,6 @@
       h1, h2, h3 {
         color: white;
       }
+
     }
-  }
+}
