@@ -27,7 +27,7 @@ export default function Experience() {
                     className="vertical-timeline-element--work"
                     contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                    date="08 2021 - present"
+                    date="08/2021 - present"
                     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                     icon={<Work />}
                 >
@@ -68,7 +68,7 @@ export default function Experience() {
                     iconStyle={{ background: 'white', color: '#fff' }}
                     icon={<Work />}
                 >
-                    <h3 className="vertical-timeline-element-title">Support Engineer</h3>
+                    <h3 className="vertical-timeline-element-title">Technical Support Engineer</h3>
                     {mstrLogo}
                     <p>
                         Tomcat, IIS,

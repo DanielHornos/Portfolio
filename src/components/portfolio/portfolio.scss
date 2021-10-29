@@ -2,10 +2,50 @@
 
 .portfolio{
     background-color: $lightBackgroundOddPages;
+
+    .portfolio-container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      height: 100%;
+    }
+
+    .portfolio-item {
+      background: tomato;
+      width: 250px;
+      height: 250px;
+      margin: 0 auto 5% auto;
+      padding: 10px 10px 5px;
+      text-align: center;
+      text-decoration: none;
+      -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+      -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+      -webkit-transition: all .20s linear;
+      -moz-transition: all .20s linear;
+      transition: all .20s linear;
+      z-index: 0;
+      position: relative;
+    }
+
+    .portfolio-item:hover {
+      cursor: pointer;
+      -webkit-transform: scale(1.01);
+      -moz-transform: scale(1.01);
+      transform: scale(1.01);
+      z-index: 10;
+      -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+      -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    }
 }
 
 .app.dark-mode{
-    .portfolio{
+    #portfolio{
       background-color: $darkBackgroundOddPages;
   
       h1, h2, h3 {
