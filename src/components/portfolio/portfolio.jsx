@@ -14,17 +14,17 @@ export default function Portfolio() {
         items: [
             {
                 name: "office addin",
-                icon: office,
+                images: [office, subscriptions, subscriptions],
                 description: "This is the description"
             },
             {
                 name: "subscriptions",
-                icon: subscriptions,
+                images: [subscriptions],
                 description: "This is the description"
             },
             {
                 name: "web scrapper",
-                icon: office,
+                images: [office],
                 description: "This is the description"
             }
         ]
@@ -41,7 +41,7 @@ export default function Portfolio() {
             PROFESSIONAL PROJECTS
             <div className="portfolio-container">
                 {objItems.items.map((item) => {
-                    const { name, icon, description } = item;
+                    const { name, images, description } = item;
                     return (
                         <div key={name}
                             className={`portfolio-item ${hoveredProject === name ? 'active' : ''}`}
@@ -49,7 +49,7 @@ export default function Portfolio() {
                             onMouseEnter={() => setHoveredProject(name)}
                             onMouseLeave={() => setHoveredProject(null)}
                         >
-                            <img src={icon} alt="" className="portfolio-image" />
+                            <img src={images[0]} alt="" className="portfolio-image" />
                             <h1>{name}</h1>
                             <h3>{description}</h3>
                         </div>)

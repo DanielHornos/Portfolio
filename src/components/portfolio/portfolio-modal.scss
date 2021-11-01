@@ -34,6 +34,39 @@
     }
   }
 
+  .center{
+    position: fixed;
+    z-index: 10;
+    top: 200px;
+    cursor: pointer;
+
+    .arrow {
+      border: solid black;
+      border-width: 0 10px 10px 0;
+      display: inline-block;
+      padding: 10px;
+    }
+
+    .arrow:hover {
+      border-width: 0 12px 12px 0;
+      padding: 12px;
+    }
+
+    .previous {
+      position: fixed;
+      left: 30px;
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+
+    .next {
+      position: fixed;
+      right: 30px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+  }
+
   .parent {
     position: relative;
     top: 0;
