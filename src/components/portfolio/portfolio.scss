@@ -32,7 +32,7 @@
       position: relative;
     }
 
-    .portfolio-item:hover {
+    .portfolio-item.active {
       cursor: pointer;
       -webkit-transform: scale(1.01);
       -moz-transform: scale(1.01);
@@ -41,6 +41,11 @@
       -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
       -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
       box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    }
+
+    img {
+      width: 230px;
+      height: 150px;
     }
 }
 
@@ -52,4 +57,4 @@
         color: white;
       }
     }
-  }
+}

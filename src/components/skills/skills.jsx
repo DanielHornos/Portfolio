@@ -45,6 +45,7 @@ export default function Skills() {
             },
         ]
     };
+    
     var skillsList = skills.icons.map(function (skills, index) {
         return (
             <div key={index} className="skill-tile">
