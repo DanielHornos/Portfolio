@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedProject }) {
 
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
     const maxNumberSlides = selectedProject?.images.length;
 
     const closeModal = () => {
@@ -13,15 +13,15 @@ export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedPr
     }
 
     const nextSlide = () => {
-        const nextIndex = (currentSlide + 1) < maxNumberSlides ? (currentSlide + 1) : 0;
+        const nextIndex = (currentSlideIndex + 1) < maxNumberSlides ? (currentSlideIndex + 1) : 0;
         console.log('nextIndex:', nextIndex)
-        setCurrentSlide(nextIndex);
+        setCurrentSlideIndex(nextIndex);
     }
 
     const previousSlide = () => {
-        const previousIndex = (currentSlide - 1) >= 0 ? (currentSlide - 1) : maxNumberSlides - 1;
+        const previousIndex = (currentSlideIndex - 1) >= 0 ? (currentSlideIndex - 1) : maxNumberSlides - 1;
         console.log('previousIndex:', previousIndex)
-        setCurrentSlide(previousIndex);
+        setCurrentSlideIndex(previousIndex);
     }
 
     const customStyles = {
@@ -56,10 +56,16 @@ export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedPr
                     <div className="arrow next" onClick={nextSlide} />
                 </div>
                 <div className="parent">
-                    <img className="portfolio-image" src={selectedProject?.images[currentSlide]} alt="" />
+                    <img className="portfolio-image" src={selectedProject?.images[currentSlideIndex]} alt="" />
                     <img className="macbook" src={macbook} alt="" />
                 </div>
-
+                <div className="dots">
+                    {selectedProject?.images.map((image, index) => {
+                        return (
+                            <span className={`dot ${currentSlideIndex === index ? 'active' : ''}`}></span>
+                        )
+                    })}
+                </div>
                 <h2>{selectedProject?.name}</h2>
                 <h3>{selectedProject?.description}</h3>
             </Modal>

@@ -52,7 +52,8 @@ export default function Portfolio() {
                             <img src={images[0]} alt="" className="portfolio-image" />
                             <h1>{name}</h1>
                             <h3>{description}</h3>
-                        </div>)
+                        </div>
+                    )
                 })}
             </div>
             <PortfolioModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} selectedProject={selectedProject} />
