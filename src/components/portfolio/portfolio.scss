@@ -3,7 +3,12 @@
 .portfolio{
     background-color: $lightBackgroundOddPages;
 
-    .portfolio-container{
+    h1 {
+      text-align: center;
+      margin: 10px 0 10px 0;
+    }
+
+    .portfolio-container {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;

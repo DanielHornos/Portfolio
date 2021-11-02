@@ -2,6 +2,7 @@ import "./portfolio-modal.scss"
 import Modal from 'react-modal';
 import macbook from "../../assets/portfolio/macbook.png";
 import { useState } from "react";
+import { skillsIcons } from "../skills/skills";
 
 export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedProject }) {
 
@@ -36,6 +37,12 @@ export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedPr
         },
     };
 
+    const getIcon = (name) => {
+        return skillsIcons.icons.filter(obj => {
+            return obj.name === name
+        })[0].icon;
+    }
+
     return (
         <div>
             <Modal
@@ -68,6 +75,16 @@ export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedPr
                 </div>
                 <h2>{selectedProject?.name}</h2>
                 <h3>{selectedProject?.description}</h3>
+                <div className="project-skills">
+                    {selectedProject?.skills.map((skill, index) => {
+                        return (
+                            <div key={index} className="skill-tile">
+                                <img src={getIcon(skill)} alt="" className="skill-logo" />
+                                {skill}
+                            </div>
+                        )
+                    })}
+                </div>
             </Modal>
         </div>
     )

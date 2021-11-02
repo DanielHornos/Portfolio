@@ -10,43 +10,43 @@ import reduxIcon from "../../assets/logos/icon-redux.svg"
 
 import "./skills.scss"
 
+export const skillsIcons = {
+    icons: [
+        {
+            name: "HTML 5",
+            icon: html5Icon,
+        },
+        {
+            name: "CSS 3",
+            icon: css3Icon,
+        },
+        {
+            name: "TypeScript",
+            icon: typescriptIcon,
+        },
+        {
+            name: "JavaScript",
+            icon: javascriptIcon,
+        },
+        {
+            name: "React",
+            icon: reactIcon,
+        },
+        {
+            name: "Sass",
+            icon: sassIcon,
+        },
+        {
+            name: "Redux",
+            icon: reduxIcon,
+        },
+    ]
+};
+
 export default function Skills() {
     const { t } = useTranslation();
 
-    const skills = {
-        icons: [
-            {
-                name: "HTML 5",
-                icon: html5Icon,
-            },
-            {
-                name: "CSS 3",
-                icon: css3Icon,
-            },
-            {
-                name: "TypeScript",
-                icon: typescriptIcon,
-            },
-            {
-                name: "JavaScript",
-                icon: javascriptIcon,
-            },
-            {
-                name: "React",
-                icon: reactIcon,
-            },
-            {
-                name: "Sass",
-                icon: sassIcon,
-            },
-            {
-                name: "Redux",
-                icon: reduxIcon,
-            },
-        ]
-    };
-    
-    var skillsList = skills.icons.map(function (skills, index) {
+    var skillsList = skillsIcons.icons.map(function (skills, index) {
         return (
             <div key={index} className="skill-tile">
                 <img src={skills.icon} alt="" className="skill-logo" />

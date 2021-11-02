@@ -15,17 +15,20 @@ export default function Portfolio() {
             {
                 name: "office addin",
                 images: [office, subscriptions, subscriptions],
-                description: "This is the description"
+                description: "This is the description",
+                skills: ["JavaScript", "React", "HTML 5", "CSS 3"]
             },
             {
                 name: "subscriptions",
                 images: [subscriptions],
-                description: "This is the description"
+                description: "This is the description",
+                skills: ["JavaScript", "React", "TypeScript", "Redux", "Sass"]
             },
             {
                 name: "web scrapper",
                 images: [office],
-                description: "This is the description"
+                description: "This is the description",
+                skills: ["JavaScript", ]
             }
         ]
     };
@@ -38,7 +41,7 @@ export default function Portfolio() {
 
     return (
         <div className="portfolio" id="portfolio">
-            PROFESSIONAL PROJECTS
+            <h1>PROFESSIONAL PROJECTS</h1>
             <div className="portfolio-container">
                 {objItems.items.map((item) => {
                     const { name, images, description } = item;
