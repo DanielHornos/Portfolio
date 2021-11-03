@@ -4,18 +4,34 @@
     background-color: $lightBackgroundEvenPages;
     overflow: hidden;
 
+    h1 {
+        text-align: center;
+        margin: 10px 0 10px 0;
+    }
 
     .skills-container {
         display: flex;
-        justify-content: center;
-        display: list-item;
 
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
+        list-style: none;
 
+        position: relative;
+        top: 40%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        
         .skill-tile {
             display: grid;
             text-align: center;
             padding: 10px 10px 10px 10px;
-            justify-items: center;
+            justify-items: center;  
+
 
             .skill-logo {
                 width: 50px;
