@@ -5,25 +5,8 @@ import { useState } from "react";
 import { skillsIcons } from "../skills/skills";
 
 export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedProject }) {
-
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
     const maxNumberSlides = selectedProject?.images.length;
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    }
-
-    const nextSlide = () => {
-        const nextIndex = (currentSlideIndex + 1) < maxNumberSlides ? (currentSlideIndex + 1) : 0;
-        console.log('nextIndex:', nextIndex)
-        setCurrentSlideIndex(nextIndex);
-    }
-
-    const previousSlide = () => {
-        const previousIndex = (currentSlideIndex - 1) >= 0 ? (currentSlideIndex - 1) : maxNumberSlides - 1;
-        console.log('previousIndex:', previousIndex)
-        setCurrentSlideIndex(previousIndex);
-    }
 
     const customStyles = {
         content: {
@@ -37,11 +20,23 @@ export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedPr
         },
     };
 
-    const getIcon = (name) => {
-        return skillsIcons.icons.filter(obj => {
-            return obj.name === name
-        })[0].icon;
+    const closeModal = () => {
+        setIsModalOpen(false);
     }
+
+    const nextSlide = () => {
+        const nextIndex = (currentSlideIndex + 1) < maxNumberSlides ? (currentSlideIndex + 1) : 0;
+        setCurrentSlideIndex(nextIndex);
+    }
+
+    const previousSlide = () => {
+        const previousIndex = (currentSlideIndex - 1) >= 0 ? (currentSlideIndex - 1) : maxNumberSlides - 1;
+        setCurrentSlideIndex(previousIndex);
+    }
+
+    const getIcon = (name) => skillsIcons.icons.filter(obj => {
+        return obj.name === name
+    })[0].icon;
 
     return (
         <div>
@@ -69,7 +64,7 @@ export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedPr
                 <div className="dots">
                     {selectedProject?.images.map((image, index) => {
                         return (
-                            <span className={`dot ${currentSlideIndex === index ? 'active' : ''}`}></span>
+                            <span key={index} className={`dot ${currentSlideIndex === index ? 'active' : ''}`} onClick={() => setCurrentSlideIndex(index)}></span>
                         )
                     })}
                 </div>

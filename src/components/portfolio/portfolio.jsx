@@ -5,13 +5,12 @@ import { useState } from "react";
 import PortfolioModal from "./portfolio-modal";
 
 export default function Portfolio() {
-
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
     const [hoveredProject, setHoveredProject] = useState(null);
 
-    const objItems = {
-        items: [
+    const portfolioProjects = {
+        professional: [
             {
                 name: "office addin",
                 images: [office, subscriptions, subscriptions],
@@ -25,39 +24,53 @@ export default function Portfolio() {
                 skills: ["JavaScript", "React", "TypeScript", "Redux", "Sass"]
             },
             {
+                name: "automation",
+                images: [office],
+                description: "This is the description",
+                skills: ["JavaScript",]
+            }
+        ],
+        personal: [
+            {
                 name: "web scrapper",
                 images: [office],
                 description: "This is the description",
-                skills: ["JavaScript", ]
+                skills: ["JavaScript",]
             }
         ]
     };
 
-    const handleClickItem = (item) => {
+    const handleClickItem = (project) => {
         setHoveredProject(null)
-        setSelectedProject(item)
+        setSelectedProject(project)
         setTimeout(() => { setIsModalOpen(true) }, 200);
+    }
+
+    const getPortfolioItem = (project) => {
+        const { name, images, description } = project;
+        return (
+            <div key={name}
+                className={`portfolio-item ${hoveredProject === name ? 'active' : ''}`}
+                onClick={() => handleClickItem(project)}
+                onMouseEnter={() => setHoveredProject(name)}
+                onMouseLeave={() => setHoveredProject(null)}
+            >
+                <img src={images[0]} alt="" className="portfolio-image" />
+                <h1>{name}</h1>
+                <h3>{description}</h3>
+            </div>
+        )
     }
 
     return (
         <div className="portfolio" id="portfolio">
             <h1>PROFESSIONAL PROJECTS</h1>
             <div className="portfolio-container">
-                {objItems.items.map((item) => {
-                    const { name, images, description } = item;
-                    return (
-                        <div key={name}
-                            className={`portfolio-item ${hoveredProject === name ? 'active' : ''}`}
-                            onClick={() => handleClickItem(item)}
-                            onMouseEnter={() => setHoveredProject(name)}
-                            onMouseLeave={() => setHoveredProject(null)}
-                        >
-                            <img src={images[0]} alt="" className="portfolio-image" />
-                            <h1>{name}</h1>
-                            <h3>{description}</h3>
-                        </div>
-                    )
-                })}
+                {portfolioProjects.professional.map((project) => getPortfolioItem(project))}
+            </div>
+            <h1>PERSONAL PROJECTS</h1>
+            <div className="portfolio-container">
+                {portfolioProjects.personal.map((project) => getPortfolioItem(project))}
             </div>
             <PortfolioModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} selectedProject={selectedProject} />
         </div>
