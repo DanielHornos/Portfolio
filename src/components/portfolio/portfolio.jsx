@@ -3,8 +3,11 @@ import office from "../../assets/portfolio/office.png"
 import subscriptions from "../../assets/portfolio/subscriptions.png"
 import { useState } from "react";
 import PortfolioModal from "./portfolio-modal";
+import { useTranslation } from 'react-i18next';
 
 export default function Portfolio() {
+    const { t } = useTranslation();
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
     const [hoveredProject, setHoveredProject] = useState(null);
@@ -12,29 +15,29 @@ export default function Portfolio() {
     const portfolioProjects = {
         professional: [
             {
-                name: "office addin",
+                name: t("portfolio.projects.professional.first.title"),
                 images: [office, subscriptions, subscriptions],
-                description: "This is the description",
+                description: t("portfolio.projects.professional.first.description"),
                 skills: ["JavaScript", "React", "HTML 5", "CSS 3"]
             },
             {
-                name: "subscriptions",
+                name: t("portfolio.projects.professional.second.title"),
                 images: [subscriptions],
-                description: "This is the description",
+                description: t("portfolio.projects.professional.second.description"),
                 skills: ["JavaScript", "React", "TypeScript", "Redux", "Sass"]
             },
             {
-                name: "automation",
+                name: t("portfolio.projects.professional.third.title"),
                 images: [office],
-                description: "This is the description",
+                description: t("portfolio.projects.professional.third.description"),
                 skills: ["JavaScript",]
             }
         ],
         personal: [
             {
-                name: "web scrapper",
+                name: t("portfolio.projects.personal.first.title"),
                 images: [office],
-                description: "This is the description",
+                description: t("portfolio.projects.personal.first.description"),
                 skills: ["JavaScript",]
             }
         ]
@@ -64,11 +67,11 @@ export default function Portfolio() {
 
     return (
         <div className="portfolio" id="portfolio">
-            <h1>PROFESSIONAL PROJECTS</h1>
+            <h1>{t("portfolio.professionalProjects").toUpperCase()}</h1>
             <div className="portfolio-container">
                 {portfolioProjects.professional.map((project) => getPortfolioItem(project))}
             </div>
-            <h1>PERSONAL PROJECTS</h1>
+            <h1>{t("portfolio.personalProjects").toUpperCase()}</h1>
             <div className="portfolio-container">
                 {portfolioProjects.personal.map((project) => getPortfolioItem(project))}
             </div>

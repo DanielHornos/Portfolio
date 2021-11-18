@@ -2,11 +2,13 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import "./experience.scss"
 import Work from './work'
+import { useTranslation } from 'react-i18next';
 
 import microstrategyLogo from "../../assets/microstrategy-logo_red.svg"
 
 
 export default function Experience() {
+    const { t } = useTranslation();
     const mstrUrl = "https://www.microstrategy.com"
     function openInNewTab(url) {
         // window.open(url, '_blank').focus();
@@ -26,11 +28,11 @@ export default function Experience() {
                     className="vertical-timeline-element--work"
                     contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                    date="08/2021 - present"
+                    date={t("experience.first.date")}
                     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                     icon={<Work />}
                 >
-                    <h3 className="vertical-timeline-element-title">Senior Software Engineer</h3>
+                    <h3 className="vertical-timeline-element-title">{t("experience.first.job")}</h3>
                     {mstrLogo}
                     <p>
                         Javascript, Typescript, React, Redux
@@ -38,12 +40,12 @@ export default function Experience() {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    date="08/2020 - 08/2021"
+                    date={t("experience.second.date")}
                     iconStyle={{ background: 'white', color: '#fff' }}
                     icon={<Work />}
 
                 >
-                    <h3 className="vertical-timeline-element-title">Software Engineer</h3>
+                    <h3 className="vertical-timeline-element-title">{t("experience.second.job")}</h3>
                     {mstrLogo}
                     <p>
                         Javascript, Typescript, React, Redux
@@ -51,11 +53,11 @@ export default function Experience() {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    date="01/2019 - 08/2020"
+                    date={t("experience.third.date")}
                     iconStyle={{ background: 'white', color: '#fff' }}
                     icon={<Work />}
                 >
-                    <h3 className="vertical-timeline-element-title">Quality Engineer</h3>
+                    <h3 className="vertical-timeline-element-title">{t("experience.third.job")}</h3>
                     {mstrLogo}
                     <p>
                         Protractor, WebDriverIO, Javascript, Rally, Python
@@ -63,11 +65,11 @@ export default function Experience() {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    date="10/2017 - 01/2019"
+                    date={t("experience.fourth.date")}
                     iconStyle={{ background: 'white', color: '#fff' }}
                     icon={<Work />}
                 >
-                    <h3 className="vertical-timeline-element-title">Technical Support Engineer</h3>
+                    <h3 className="vertical-timeline-element-title">{t("experience.fourth.job")}</h3>
                     {mstrLogo}
                     <p>
                         Tomcat, IIS,

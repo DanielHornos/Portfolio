@@ -9,7 +9,7 @@ const esTranslations = {
         },
         intro: {
             welcome: "Hola ¿Qué tal?, soy",
-            webDeveloper: 'Desarrollador Web',
+            softwareEngineer: 'Desarrollador de Software Senior',
         },
         contact: {
             contactMe: "Contáctame",
