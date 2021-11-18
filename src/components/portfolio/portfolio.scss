@@ -56,6 +56,11 @@
 .app.dark-mode{
     #portfolio{
       background-color: $darkBackgroundOddPages;
+
+
+      .portfolio-item {
+        background-color: $menuColor;
+      }
   
       h1, h2, h3 {
         color: white;

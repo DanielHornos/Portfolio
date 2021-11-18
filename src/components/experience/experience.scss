@@ -26,11 +26,22 @@
 
 .app.dark-mode{
     .experience{
-        background-color: $darkBackgroundOddPages;
-  
-      h1, h2, h3 {
-        color: white;
+      background-color: $darkBackgroundOddPages;
+      
+      .vertical-timeline div:first-child {
+        .bounce-in {
+          background-color: $menuColor !important;
+        }
       }
-
+        
+      .vertical-timeline div:not(:first-child) {
+        .bounce-in {
+          background-color: lightgray !important;
+          
+          h3 {
+            color: black;
+          }
+        }
+      }
     }
 }
