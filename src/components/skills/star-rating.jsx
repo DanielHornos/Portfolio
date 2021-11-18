@@ -9,7 +9,7 @@ export default function StarRating({ rating }) {
       {[...Array(maxStars)].map((star, index) => {
         index += 1;
         return (
-          <span className={`star ${index <= (rating) ? "on" : "off"}`}>&#9733;</span>
+          <span className={`star ${index <= (rating) ? "on" : "off"}`} key={index}>&#9733;</span>
         );
       })}
       {`${rating} / ${maxStars}`}

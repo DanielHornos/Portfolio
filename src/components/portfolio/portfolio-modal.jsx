@@ -46,13 +46,23 @@ export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedPr
                 style={customStyles}
                 contentLabel="Example Modal"
                 ariaHideApp={false}
+            // closeModal={closeModal}
             >
-                <div className="right" >
+                {/* <div className="right" >
                     <div className="close-modal" onClick={closeModal}>
                         <span className="line1"></span>
                         <span className="line2"></span>
                     </div>
-                </div>
+                </div> */}
+                <button
+                    type="button"
+                    className="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                    onClick={closeModal}
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <div className="center" >
                     <div className="arrow previous" onClick={previousSlide} />
                     <div className="arrow next" onClick={nextSlide} />
