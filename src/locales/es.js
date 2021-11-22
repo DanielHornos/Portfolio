@@ -12,12 +12,12 @@ const esTranslations = {
             softwareEngineer: 'Desarrollador de Software Senior',
         },
         portfolio: {
-            professionalProjects: "Professional projects",
-            personalProjects: "Personal projects",
+            professionalProjects: "Proyectos profesionales",
+            personalProjects: "Proyectos personales",
             projects: {
                 professional: {
                     first: {
-                        title: "Office Addin",
+                        title: "Add-in para Office",
                         description: "Add-in para Office que permite al usuario utilizar Microsoft Excel para conectar con datos de MicroStrategy",
                         description2: "Este add-in sirve  importar, editar y actualizar informes, conjuntos de datos y dosieres de MicroStrategy a Microsoft Excel.",
                         description3: "Es compatible con todas las versiones de Windows y Mac de Office y Office 365 Online para los principales navegadores, incluidos Google Chrome, Firefox, Safari y Microsoft Edge",
@@ -70,6 +70,7 @@ const esTranslations = {
             email: "Correo electrónico",
             message: 'Mensaje',
             send: 'Enviar',
+            description: '¿Estas interesado en trabajar juntos? Por favor, rellene el formulario con información sobre su proyecto y me pondré en contacto con usted lo antes posible. Por favor, déjeme un par de días para responder.',
             validInput: {
                 thanks: 'Gracias, el mensaje se ha enviado correctamente',
                 replyAsap: "Le contestaré lo antes posible :)"

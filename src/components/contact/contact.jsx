@@ -72,6 +72,7 @@ export default function Contact() {
       </div>
       <div className="right">
         <h2>{t("contact.contactMe")}</h2>
+        <h5>{t("contact.description")}</h5>
         <form onSubmit={handleSubmit}>
           <input id="from_email" type="text" placeholder={t("contact.email")} value={email} onChange={handleEmailChange} />
           <textarea id="message" placeholder={t("contact.message")} value={message} onChange={handleMessageChange}></textarea>

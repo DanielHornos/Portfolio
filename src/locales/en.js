@@ -70,6 +70,7 @@ const enTranslations = {
             email: "Email",
             message: 'Message',
             send: 'Send',
+            description: 'Interested in working together? \nPlease fill the form below with some info about your project and I will get you back as soon as possible. \nPlease allow a couple of days for me to respond.',
             validInput: {
                 thanks: 'Thanks, message was sent correctly',
                 replyAsap: "I'll reply ASAP :)"
