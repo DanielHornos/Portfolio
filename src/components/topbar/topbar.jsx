@@ -14,7 +14,7 @@ export default function Topbar({ menuOpen, setMenuOpen, darkMode, setDarkMode })
     const languages = {
         en: { flag: enFlag },
         es: { flag: esFlag },
-        pl: { flag: plFlag }
+        // pl: { flag: plFlag } // TODO: add translation for polish
     };
 
     const handleOnChange = () => {

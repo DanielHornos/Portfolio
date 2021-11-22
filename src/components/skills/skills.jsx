@@ -21,62 +21,74 @@ export const skillsIcons = {
         {
             name: "JavaScript",
             icon: javascriptIcon,
-            rating: 5
+            rating: 5,
+            isShownInSkills: true,
         },
         {
             name: "TypeScript",
             icon: typescriptIcon,
-            rating: 5
+            rating: 5,
+            isShownInSkills: true,
         },
         {
             name: "React",
             icon: reactIcon,
-            rating: 5
+            rating: 5,
+            isShownInSkills: true,
         },
         {
             name: "Redux",
             icon: reduxIcon,
-            rating: 5
+            rating: 5,
+            isShownInSkills: true,
         },
         {
             name: "HTML 5",
             icon: html5Icon,
-            rating: 4
+            rating: 4,
+            isShownInSkills: true,
         },
         {
             name: "CSS 3",
             icon: css3Icon,
-            rating: 4
+            rating: 4,
+            isShownInSkills: true,
         },
         {
             name: "Sass",
             icon: sassIcon,
-            rating: 4
+            rating: 4,
+            isShownInSkills: true,
         },
         {
             name: "Java",
             icon: java,
-            rating: 2
+            rating: 2,
+            isShownInSkills: true,
         },
         {
             name: "Puppeeter",
             icon: pupeeteer,
-            rating: 4
+            rating: 4,
+            isShownInSkills: false,
         },
         {
             name: "MySQL",
             icon: mysql,
-            rating: 4
+            rating: 4,
+            isShownInSkills: false,
         },
         {
             name: "Protractor",
             icon: protractor,
-            rating: 4
+            rating: 4,
+            isShownInSkills: false,
         },
         {
             name: "WebDriverIO",
             icon: webDriverIO,
-            rating: 4
+            rating: 4,
+            isShownInSkills: false,
         },
     ]
 };
@@ -84,14 +96,16 @@ export const skillsIcons = {
 export default function Skills() {
     const { t } = useTranslation();
 
-    var skillsList = skillsIcons.icons.map(function (skills, index) {
-        return (
-            <div key={index} className="skill-tile">
-                <img src={skills.icon} alt="" className="skill-logo" />
-                {skills.name}
-                <StarRating rating={skills.rating} />
-            </div>
-        );
+    var skillsList = skillsIcons.icons.map((skills, index) => {
+        if (skills.isShownInSkills) {
+            return (
+                <div key={index} className="skill-tile">
+                    <img src={skills.icon} alt="" className="skill-logo" />
+                    {skills.name}
+                    <StarRating rating={skills.rating} />
+                </div>
+            );
+        }
     });
 
     return (
