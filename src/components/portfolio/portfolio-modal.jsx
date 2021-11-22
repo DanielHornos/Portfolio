@@ -79,7 +79,7 @@ export default function PortfolioModal({ isModalOpen, setIsModalOpen, selectedPr
                     })}
                 </div>
                 <h2>{selectedProject?.name}</h2>
-                <h3>{selectedProject?.description}</h3>
+                <h5>{selectedProject?.description[currentSlideIndex]}</h5>
                 <div className="project-skills">
                     {selectedProject?.skills.map((skill, index) => {
                         return (
