@@ -106,6 +106,7 @@ export default function Skills() {
                 </div>
             );
         }
+        return ''
     });
 
     return (

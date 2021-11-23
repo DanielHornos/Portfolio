@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./star-rating.scss"
 
 

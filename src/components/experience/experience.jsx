@@ -16,9 +16,9 @@ export default function Experience() {
     }
 
     const mstrLogo = (
-        <td className="mstr-logo" onClick={openInNewTab(mstrUrl)}>
+        <div className="mstr-logo" onClick={openInNewTab(mstrUrl)}>
             <img src={microstrategyLogo} alt="" />
-        </td>
+        </div>
     )
 
     return (
@@ -35,7 +35,7 @@ export default function Experience() {
                     <h3 className="vertical-timeline-element-title">{t("experience.first.job")}</h3>
                     {mstrLogo}
                     <p>
-                        Javascript, Typescript, React, Redux
+                        TypeScript, Redux, React, RESTful APIs, SASS
                     </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -48,7 +48,7 @@ export default function Experience() {
                     <h3 className="vertical-timeline-element-title">{t("experience.second.job")}</h3>
                     {mstrLogo}
                     <p>
-                        Javascript, Typescript, React, Redux
+                        JavaScript, Redux, React, CSS, RESTful APIs
                     </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -72,7 +72,10 @@ export default function Experience() {
                     <h3 className="vertical-timeline-element-title">{t("experience.fourth.job")}</h3>
                     {mstrLogo}
                     <p>
-                        Tomcat, IIS,
+                        Servidores Web: Tomcat, IIS, Weblogic.
+                    </p>
+                    <p>
+                        Bases de datos: Microsoft, Oracle, MySQL, PostgreSQL, IBM.
                     </p>
                 </VerticalTimelineElement>
             </VerticalTimeline>
