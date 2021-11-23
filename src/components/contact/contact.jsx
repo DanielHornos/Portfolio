@@ -2,7 +2,6 @@ import emailjs from 'emailjs-com';
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 
-import { apiKey } from '../../config/emailkeys';
 import handshakeImage from "../../assets/shake.svg";
 
 import ReCaptchaV2 from 'react-google-recaptcha'
@@ -23,7 +22,7 @@ export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [form, setForm] = useState(defaultForm)
 
-  const { email, message } = form;
+  const { email, message, token } = form;
 
 
   const validateEmail = (email) => {
@@ -34,8 +33,6 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('form:', form)
-
     const isValid = validateEmail(email);
     setIsValidEmail(isValid);
     if (isValid && !!message) {
@@ -44,10 +41,11 @@ export default function Contact() {
         message: message
       };
 
-      emailjs.send(apiKey.SERVICE_ID, apiKey.TEMPLATE_ID, templateParams, apiKey.USER_ID)
+      const { REACT_APP_API_KEY_SERVICE_ID, REACT_APP_API_KEY_USER_ID, REACT_APP_API_KEY_TEMPLATE_ID } = process.env;
+
+      emailjs.send(REACT_APP_API_KEY_SERVICE_ID, REACT_APP_API_KEY_TEMPLATE_ID, templateParams, REACT_APP_API_KEY_USER_ID)
         .then((result) => {
           setIsSubmitted(true);
-          // alert("Message Sent, We will get back to you shortly", result.text);
         },
           (error) => {
             alert("An error occurred, Please try again", error.text);
@@ -88,6 +86,28 @@ export default function Contact() {
     })
   }
 
+  // const isCaptchaLegit = async () => {
+  //   const { REACT_APP_SITE_KEY, REACT_APP_SECRET_KEY } = process.env;
+
+  //   var body = {
+  //     secret: REACT_APP_SECRET_KEY,
+  //     response: token
+  //   };
+
+  //   const rawResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(body)
+  //   });
+  //   const content = await rawResponse.json();
+  //   console.log('content:', content)
+
+  //   return content
+  // }
+
   const createResponseMessage = () => {
     if (isValidEmail && !!message) {
       return <span className="valid-input">{t("contact.validInput.thanks")}.<br /> {t("contact.validInput.replyAsap")}</span>
@@ -114,11 +134,11 @@ export default function Contact() {
           <textarea id="message" name="message" placeholder={t("contact.message")} value={message} onChange={handleChange}></textarea>
           <button type="submit">{t("contact.send")}</button>
           {isSubmitted && createResponseMessage()}
-          <ReCaptchaV2
+          {/* <ReCaptchaV2
             sitekey={process.env.REACT_APP_SITE_KEY}
             onChange={handleToken}
             onExpire={handleExpire}
-          />
+          /> */}
         </form>
       </div>
     </div>
