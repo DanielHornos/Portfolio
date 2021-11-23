@@ -21,7 +21,7 @@ const esTranslations = {
                         description: "Add-in para Office que permite al usuario utilizar Microsoft Excel para conectar con datos de MicroStrategy",
                         description2: "Este add-in sirve  importar, editar y actualizar informes, conjuntos de datos y dosieres de MicroStrategy a Microsoft Excel.",
                         description3: "Es compatible con todas las versiones de Windows y Mac de Office y Office 365 Online para los principales navegadores, incluidos Google Chrome, Firefox, Safari y Microsoft Edge",
-                        description4: "Fue desarrollado utilizando múltiples tecnologías, pero principalmente JavaScript y React. \ n REST API para obtener información de MicroStrategy y API de Excel JS para insertar los datos en Office"
+                        description4: "Fue desarrollado utilizando múltiples tecnologías, pero principalmente JavaScript y React. \n REST API para obtener información de MicroStrategy y API de Excel JS para insertar los datos en Office"
                     },
                     second: {
                         title: "Subcripciones",

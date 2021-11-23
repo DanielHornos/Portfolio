@@ -2,6 +2,9 @@
 
 /src/config
 
+# captcha
+.env
+
 # dependencies
 /node_modules
 /.pnp
