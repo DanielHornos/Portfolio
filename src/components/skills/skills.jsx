@@ -63,7 +63,7 @@ export const skillsIcons = {
         {
             name: "Java",
             icon: java,
-            rating: 2,
+            rating: 3,
             isShownInSkills: true,
         },
         {
